@@ -1,0 +1,231 @@
+[gd_scene load_steps=23 format=3 uid="uid://d0ol8022xyf0p"]
+
+[ext_resource type="Script" uid="uid://bvw3lmtnftmbm" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://d38l5furuoiqs" path="res://assets/images/stage/palco.png" id="2_dinhu"]
+[ext_resource type="Script" uid="uid://by6vthm0bolef" path="res://scripts/stats.gd" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://c8weou16k8pbt" path="res://assets/images/instruments/pianista1.png" id="4_dinhu"]
+[ext_resource type="Texture2D" uid="uid://lw308bouhole" path="res://assets/images/shop/pianocard1.png" id="4_kvuet"]
+[ext_resource type="AudioStream" uid="uid://eiqd3nwaa1qi" path="res://assets/sfx/clap1.wav" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://bamo822gw0i7k" path="res://assets/music/piano.wav" id="5_dinhu"]
+[ext_resource type="Texture2D" uid="uid://ba6vvtxgjaksp" path="res://assets/images/shop/cardbass1.png" id="5_ir15t"]
+[ext_resource type="AudioStream" uid="uid://lrmtkpwiqh7t" path="res://assets/sfx/clap2.wav" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://buyow3xswt37n" path="res://scripts/pianobuy.gd" id="5_rysoc"]
+[ext_resource type="Script" uid="uid://cywryd3uj8xhv" path="res://scripts/bassbuy.gd" id="6_ca42v"]
+[ext_resource type="Texture2D" uid="uid://c3s6yn33i7ecj" path="res://assets/images/instruments/baixista1.png" id="6_kvuet"]
+[ext_resource type="AudioStream" uid="uid://bhhn2p7n8i2dp" path="res://assets/sfx/clap3.wav" id="6_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://ckk7tx04huk4y" path="res://assets/sfx/clap4.wav" id="7_gee14"]
+[ext_resource type="AudioStream" uid="uid://dj4v4rlla0a1m" path="res://assets/music/bass.wav" id="7_kvuet"]
+[ext_resource type="AudioStream" uid="uid://s1gsmcfibr0h" path="res://assets/sfx/clap5.wav" id="8_0tnpc"]
+[ext_resource type="Script" uid="uid://1ksgt7dvbkqj" path="res://scripts/piano.gd" id="9_264po"]
+[ext_resource type="Script" uid="uid://d231py2jatinp" path="res://scripts/bass.gd" id="12_1kice"]
+[ext_resource type="Script" uid="uid://c0vj0su2vs7ls" path="res://scripts/naoposicionar.gd" id="12_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://b7y2d35h8gs7w" path="res://assets/images/shop/lojinha.png" id="15_ca42v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
+size = Vector2(9.70297, 8.24359)
+
+[sub_resource type="GDScript" id="GDScript_lbhrr"]
+script/source = "extends AudioStreamPlayer
+
+
+
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqjtg")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+offset_right = 1210.0
+offset_bottom = 1080.0
+
+[node name="Click" type="TextureButton" parent="CenterContainer"]
+z_index = -2
+texture_filter = 1
+custom_minimum_size = Vector2(1210, 1080)
+layout_mode = 2
+texture_normal = ExtResource("2_dinhu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="stats" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1210, 0)
+layout_mode = 1
+offset_top = 16.0
+offset_right = 1210.0
+offset_bottom = 99.0
+script = ExtResource("3_lnu2h")
+
+[node name="applausescounter" type="Label" parent="stats"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 60
+text = "0 Applauses"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="loja" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 1253.0
+offset_top = 181.0
+offset_right = 1878.0
+offset_bottom = 1080.0
+
+[node name="pianobuy" type="TextureButton" parent="loja"]
+layout_mode = 2
+texture_normal = ExtResource("4_kvuet")
+script = ExtResource("5_rysoc")
+
+[node name="preco" type="RichTextLabel" parent="loja/pianobuy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 55
+text = "100"
+vertical_alignment = 1
+
+[node name="escurecer" type="ColorRect" parent="loja/pianobuy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="bassbuy" type="TextureButton" parent="loja"]
+layout_mode = 2
+texture_normal = ExtResource("5_ir15t")
+script = ExtResource("6_ca42v")
+
+[node name="preco" type="RichTextLabel" parent="loja/bassbuy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 55
+text = "300"
+vertical_alignment = 1
+
+[node name="escurecer" type="ColorRect" parent="loja/bassbuy"]
+modulate = Color(1, 1, 1, 0.588235)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="instrumentos" type="Node2D" parent="."]
+
+[node name="piano" type="Sprite2D" parent="instrumentos"]
+visible = false
+texture = ExtResource("4_dinhu")
+script = ExtResource("9_264po")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="instrumentos/piano"]
+stream = ExtResource("5_dinhu")
+
+[node name="bass" type="Sprite2D" parent="instrumentos"]
+visible = false
+texture = ExtResource("6_kvuet")
+script = ExtResource("12_1kice")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="instrumentos/bass"]
+stream = ExtResource("7_kvuet")
+
+[node name="AreaPosicionamento" type="Area2D" parent="instrumentos"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="instrumentos/AreaPosicionamento"]
+position = Vector2(602, 442.5)
+scale = Vector2(101, 78)
+shape = SubResource("RectangleShape2D_gee14")
+
+[node name="naoposicionar" type="ColorRect" parent="instrumentos/AreaPosicionamento"]
+offset_top = 852.0
+offset_right = 1210.0
+offset_bottom = 1080.0
+color = Color(0.539863, 1.03481e-06, 2.88785e-07, 1)
+script = ExtResource("12_ssvqc")
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="sfx_clap1" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("4_lbhrr")
+volume_db = -20.0
+script = SubResource("GDScript_lbhrr")
+
+[node name="sfx_clap2" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("5_p57ef")
+volume_db = -20.0
+
+[node name="sfx_clap3" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("6_u5sy4")
+volume_db = -20.0
+
+[node name="sfx_clap4" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("7_gee14")
+volume_db = -20.0
+
+[node name="sfx_clap5" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("8_0tnpc")
+volume_db = -20.0
+
+[node name="Lojinha" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1563, 540)
+texture = ExtResource("15_ca42v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Lojinha"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -357.0
+offset_top = -540.0
+offset_right = -357.0
+offset_bottom = -406.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 80
+text = "LOJINHA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="app_update" from="." to="stats" method="_on_game_app_update"]
+[connection signal="app_update" from="." to="loja/pianobuy" method="_on_game_app_update"]
+[connection signal="app_update" from="." to="loja/bassbuy" method="_on_game_app_update"]
+[connection signal="button_down" from="CenterContainer/Click" to="." method="_on_click_button_down"]
+[connection signal="pressed" from="loja/pianobuy" to="." method="_on_pianobuy_pressed"]
+[connection signal="pressed" from="loja/bassbuy" to="." method="_on_bassbuy_pressed"]
+[connection signal="mouse_entered" from="instrumentos/AreaPosicionamento" to="." method="_on_area_2d_mouse_entered"]
