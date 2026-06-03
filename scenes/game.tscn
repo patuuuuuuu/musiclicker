@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b7y2d35h8gs7w" path="res://assets/images/shop/lojinha.png" id="15_ca42v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
-size = Vector2(9.70297, 8.24359)
+size = Vector2(9.52475, 6.97436)
 
 [sub_resource type="GDScript" id="GDScript_lbhrr"]
 script/source = "extends AudioStreamPlayer
@@ -70,6 +70,7 @@ offset_bottom = 99.0
 script = ExtResource("3_lnu2h")
 
 [node name="applausescounter" type="Label" parent="stats"]
+z_index = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
 theme_override_constants/outline_size = 25
@@ -80,9 +81,9 @@ vertical_alignment = 1
 
 [node name="loja" type="VBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 1253.0
+offset_left = 1251.0
 offset_top = 181.0
-offset_right = 1878.0
+offset_right = 1876.0
 offset_bottom = 1080.0
 
 [node name="pianobuy" type="TextureButton" parent="loja"]
@@ -90,7 +91,7 @@ layout_mode = 2
 texture_normal = ExtResource("4_kvuet")
 script = ExtResource("5_rysoc")
 
-[node name="preco" type="RichTextLabel" parent="loja/pianobuy"]
+[node name="preco" type="Label" parent="loja/pianobuy"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -98,14 +99,14 @@ anchor_bottom = 1.0
 offset_left = 42.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
 theme_override_constants/outline_size = 20
-theme_override_font_sizes/normal_font_size = 55
+theme_override_font_sizes/font_size = 50
 text = "100"
 vertical_alignment = 1
 
 [node name="escurecer" type="ColorRect" parent="loja/pianobuy"]
+modulate = Color(1, 1, 1, 0.588235)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -120,7 +121,7 @@ layout_mode = 2
 texture_normal = ExtResource("5_ir15t")
 script = ExtResource("6_ca42v")
 
-[node name="preco" type="RichTextLabel" parent="loja/bassbuy"]
+[node name="preco" type="Label" parent="loja/bassbuy"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,7 +132,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0.168627, 0.0901961, 0.12549, 1)
 theme_override_constants/outline_size = 20
-theme_override_font_sizes/normal_font_size = 55
+theme_override_font_sizes/font_size = 50
 text = "300"
 vertical_alignment = 1
 
@@ -147,6 +148,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="instrumentos" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="piano" type="Sprite2D" parent="instrumentos"]
 visible = false
@@ -168,7 +170,7 @@ stream = ExtResource("7_kvuet")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="instrumentos/AreaPosicionamento"]
-position = Vector2(602, 442.5)
+position = Vector2(602, 424)
 scale = Vector2(101, 78)
 shape = SubResource("RectangleShape2D_gee14")
 
@@ -227,5 +229,7 @@ vertical_alignment = 1
 [connection signal="app_update" from="." to="loja/bassbuy" method="_on_game_app_update"]
 [connection signal="button_down" from="CenterContainer/Click" to="." method="_on_click_button_down"]
 [connection signal="pressed" from="loja/pianobuy" to="." method="_on_pianobuy_pressed"]
+[connection signal="pressed" from="loja/pianobuy" to="loja/pianobuy" method="_on_pressed"]
 [connection signal="pressed" from="loja/bassbuy" to="." method="_on_bassbuy_pressed"]
+[connection signal="pressed" from="loja/bassbuy" to="loja/bassbuy" method="_on_pressed"]
 [connection signal="mouse_entered" from="instrumentos/AreaPosicionamento" to="." method="_on_area_2d_mouse_entered"]
