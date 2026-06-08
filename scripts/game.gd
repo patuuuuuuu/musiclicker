@@ -15,7 +15,7 @@ signal app_update
 @onready var sfx_clap_5: AudioStreamPlayer = $sfx/sfx_clap5
 
 #MUSICA
-var bpm = 120
+var bpm = 100
 var bps = 60.0 / bpm
 var instrumentos_ativos = []
 

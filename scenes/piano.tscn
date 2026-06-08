@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cde7lhsedvaop"]
+
+[ext_resource type="Texture2D" uid="uid://c8weou16k8pbt" path="res://assets/images/instruments/pianista1.png" id="1_s1p1n"]
+[ext_resource type="Script" uid="uid://1ksgt7dvbkqj" path="res://scripts/piano.gd" id="2_y7f5w"]
+[ext_resource type="AudioStream" uid="uid://cnv4aolc36qvr" path="res://assets/music/pianotrack3v1.wav" id="3_q23mb"]
+
+[node name="piano" type="Sprite2D"]
+visible = false
+texture = ExtResource("1_s1p1n")
+script = ExtResource("2_y7f5w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q23mb")

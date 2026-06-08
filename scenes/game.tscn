@@ -1,23 +1,19 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0ol8022xyf0p"]
+[gd_scene load_steps=19 format=3 uid="uid://d0ol8022xyf0p"]
 
 [ext_resource type="Script" uid="uid://bvw3lmtnftmbm" path="res://scripts/game.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://d38l5furuoiqs" path="res://assets/images/stage/palco.png" id="2_dinhu"]
 [ext_resource type="Script" uid="uid://by6vthm0bolef" path="res://scripts/stats.gd" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://c8weou16k8pbt" path="res://assets/images/instruments/pianista1.png" id="4_dinhu"]
 [ext_resource type="Texture2D" uid="uid://lw308bouhole" path="res://assets/images/shop/pianocard1.png" id="4_kvuet"]
 [ext_resource type="AudioStream" uid="uid://eiqd3nwaa1qi" path="res://assets/sfx/clap1.wav" id="4_lbhrr"]
-[ext_resource type="AudioStream" uid="uid://bamo822gw0i7k" path="res://assets/music/piano.wav" id="5_dinhu"]
 [ext_resource type="Texture2D" uid="uid://ba6vvtxgjaksp" path="res://assets/images/shop/cardbass1.png" id="5_ir15t"]
 [ext_resource type="AudioStream" uid="uid://lrmtkpwiqh7t" path="res://assets/sfx/clap2.wav" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://buyow3xswt37n" path="res://scripts/pianobuy.gd" id="5_rysoc"]
 [ext_resource type="Script" uid="uid://cywryd3uj8xhv" path="res://scripts/bassbuy.gd" id="6_ca42v"]
-[ext_resource type="Texture2D" uid="uid://c3s6yn33i7ecj" path="res://assets/images/instruments/baixista1.png" id="6_kvuet"]
 [ext_resource type="AudioStream" uid="uid://bhhn2p7n8i2dp" path="res://assets/sfx/clap3.wav" id="6_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://ckk7tx04huk4y" path="res://assets/sfx/clap4.wav" id="7_gee14"]
-[ext_resource type="AudioStream" uid="uid://dj4v4rlla0a1m" path="res://assets/music/bass.wav" id="7_kvuet"]
 [ext_resource type="AudioStream" uid="uid://s1gsmcfibr0h" path="res://assets/sfx/clap5.wav" id="8_0tnpc"]
-[ext_resource type="Script" uid="uid://1ksgt7dvbkqj" path="res://scripts/piano.gd" id="9_264po"]
-[ext_resource type="Script" uid="uid://d231py2jatinp" path="res://scripts/bass.gd" id="12_1kice"]
+[ext_resource type="PackedScene" uid="uid://cde7lhsedvaop" path="res://scenes/piano.tscn" id="8_ca42v"]
+[ext_resource type="PackedScene" uid="uid://ccpkwyr32go3n" path="res://scenes/bass.tscn" id="9_rysoc"]
 [ext_resource type="Script" uid="uid://c0vj0su2vs7ls" path="res://scripts/naoposicionar.gd" id="12_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b7y2d35h8gs7w" path="res://assets/images/shop/lojinha.png" id="15_ca42v"]
 
@@ -150,21 +146,9 @@ color = Color(0, 0, 0, 1)
 [node name="instrumentos" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="piano" type="Sprite2D" parent="instrumentos"]
-visible = false
-texture = ExtResource("4_dinhu")
-script = ExtResource("9_264po")
+[node name="piano" parent="instrumentos" instance=ExtResource("8_ca42v")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="instrumentos/piano"]
-stream = ExtResource("5_dinhu")
-
-[node name="bass" type="Sprite2D" parent="instrumentos"]
-visible = false
-texture = ExtResource("6_kvuet")
-script = ExtResource("12_1kice")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="instrumentos/bass"]
-stream = ExtResource("7_kvuet")
+[node name="bass" parent="instrumentos" instance=ExtResource("9_rysoc")]
 
 [node name="AreaPosicionamento" type="Area2D" parent="instrumentos"]
 collision_layer = 2

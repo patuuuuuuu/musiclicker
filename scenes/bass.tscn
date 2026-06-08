@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccpkwyr32go3n"]
+
+[ext_resource type="Texture2D" uid="uid://c3s6yn33i7ecj" path="res://assets/images/instruments/baixista1.png" id="1_s4bct"]
+[ext_resource type="Script" uid="uid://d231py2jatinp" path="res://scripts/bass.gd" id="2_srv8m"]
+[ext_resource type="AudioStream" uid="uid://cgl8f4h1jkfjc" path="res://assets/music/basstrack3v1.wav" id="3_gpqhq"]
+
+[node name="bass" type="Sprite2D"]
+visible = false
+texture = ExtResource("1_s4bct")
+script = ExtResource("2_srv8m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gpqhq")
