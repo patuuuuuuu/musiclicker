@@ -3,7 +3,7 @@ extends Control
 const save_path = "user://userdata.save"
 #BASE
 var applauses = 0
-var app_per_click = 10
+var app_per_click = 5
 
 signal app_update
 
@@ -15,7 +15,7 @@ signal app_update
 @onready var sfx_clap_5: AudioStreamPlayer = $sfx/sfx_clap5
 
 #MUSICA
-var bpm = 120
+var bpm = 100
 var bps = 60.0 / bpm
 var instrumentos_ativos = []
 
@@ -24,17 +24,23 @@ var instrumentos_ativos = []
 @onready var container_instrumentos = $instrumentos
 @onready var molde_piano = $instrumentos/piano
 @onready var molde_bass = $instrumentos/bass
+@onready var molde_drum = $instrumentos/drum
+@onready var molde_guitar = $instrumentos/guitar
 
 var instrumento_sendo_posicionado = null
 
 var tem_piano = false
 var tem_bass = false
+var tem_drum = false
+var tem_guitar = false
 
 #FUNCTIONS
 func _ready() -> void:
 	#esconder moldes de instrumentos
 	molde_piano.visible = false
 	molde_bass.visible = false
+	molde_drum.visible = false
+	molde_guitar.visible = false
 	
 	#load_data()
 	emit_signal("app_update", applauses)
@@ -95,9 +101,15 @@ func recriar_instrumento_salvo(dados):
 	if dados["tipo"] == "piano":
 		novo_instr = molde_piano.duplicate()
 		novo_instr.set_meta("tipo_instrumento", "piano")
-	else:
+	elif dados["tipo"] == "bass":
 		novo_instr = molde_bass.duplicate()
 		novo_instr.set_meta("tipo_instrumento", "bass")
+	elif dados["tipo"] == "drum":
+		novo_instr = molde_bass.duplicate()
+		novo_instr.set_meta("tipo_instrumento", "drum")
+	elif dados["tipo"] == "guitar":
+		novo_instr = molde_bass.duplicate()
+		novo_instr.set_meta("tipo_instrumento", "guitar")
 	
 	novo_instr.visible = true
 	container_instrumentos.add_child(novo_instr)
@@ -228,3 +240,28 @@ func _on_bassbuy_pressed() -> void:
 		app_per_click += 3
 		update_applauses()
 		
+
+func _on_drumbuy_pressed() -> void:
+	if applauses >= 700 and not tem_drum:
+		var novo_drum = molde_drum.duplicate()
+		novo_drum.set_meta("tipo_instrumento", "drum") # ETIQUETA AQUI
+		novo_drum.visible = true
+		container_instrumentos.add_child(novo_drum)
+		instrumento_sendo_posicionado = novo_drum
+		tem_drum = true
+		applauses -= 700
+		app_per_click += 7
+		update_applauses()
+
+
+func _on_guitarbuy_pressed() -> void:
+	if applauses >= 1200 and not tem_guitar:
+		var novo_guitar = molde_guitar.duplicate()
+		novo_guitar.set_meta("tipo_instrumento", "guitar") # ETIQUETA AQUI
+		novo_guitar.visible = true
+		container_instrumentos.add_child(novo_guitar)
+		instrumento_sendo_posicionado = novo_guitar
+		tem_guitar = true
+		applauses -= 1200
+		app_per_click += 12
+		update_applauses()
