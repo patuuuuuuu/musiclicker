@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< Updated upstream
-uid="uid://5e8f4u4bp68o"
-=======
-uid="uid://dsuavpqc56y8m"
->>>>>>> Stashed changes
+uid="uid://djuu0ey2sc4y5"
 path="res://.godot/imported/drumtrack3v1.wav-383608f63b337161064498c2a65dda33.sample"
 
 [deps]

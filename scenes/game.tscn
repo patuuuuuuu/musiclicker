@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=32 format=3 uid="uid://d0ol8022xyf0p"]
-=======
-[gd_scene load_steps=31 format=3 uid="uid://d0ol8022xyf0p"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://bvw3lmtnftmbm" path="res://scripts/game.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://d38l5furuoiqs" path="res://assets/images/stage/palco.png" id="2_dinhu"]
@@ -18,38 +14,21 @@
 [ext_resource type="AudioStream" uid="uid://bhhn2p7n8i2dp" path="res://assets/sfx/clap3.wav" id="6_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://ckk7tx04huk4y" path="res://assets/sfx/clap4.wav" id="7_gee14"]
 [ext_resource type="AudioStream" uid="uid://s1gsmcfibr0h" path="res://assets/sfx/clap5.wav" id="8_0tnpc"]
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://dvnudbhikstgs" path="res://assets/images/shop/carddrum1.png" id="8_bhx41"]
+[ext_resource type="Texture2D" uid="uid://cgh27xsf5u2e4" path="res://assets/images/shop/carddrum1.png" id="8_bhx41"]
 [ext_resource type="Script" uid="uid://1ksgt7dvbkqj" path="res://scripts/piano.gd" id="9_264po"]
-[ext_resource type="Texture2D" uid="uid://c2ax4fj33kv1a" path="res://assets/images/shop/cardguitar1.png" id="9_qnb83"]
-[ext_resource type="Script" uid="uid://do5nrfwdhn56b" path="res://scripts/drumbuy.gd" id="9_sww3w"]
-[ext_resource type="AudioStream" uid="uid://djl7t5vvlkb8s" path="res://assets/music/pianotrack3v1.wav" id="10_1kice"]
-[ext_resource type="Script" uid="uid://cqhwev3rfpxwl" path="res://scripts/guitarbuy.gd" id="11_suyxu"]
+[ext_resource type="Texture2D" uid="uid://e36br64yaim4" path="res://assets/images/shop/cardguitar1.png" id="9_qnb83"]
+[ext_resource type="Script" path="res://scripts/drumbuy.gd" id="9_sww3w"]
+[ext_resource type="AudioStream" uid="uid://cowu6j5odpgwx" path="res://assets/music/pianotrack3v1.wav" id="10_1kice"]
+[ext_resource type="Script" path="res://scripts/guitarbuy.gd" id="11_suyxu"]
 [ext_resource type="Script" uid="uid://d231py2jatinp" path="res://scripts/bass.gd" id="12_1kice"]
 [ext_resource type="Script" uid="uid://c0vj0su2vs7ls" path="res://scripts/naoposicionar.gd" id="12_ssvqc"]
-[ext_resource type="AudioStream" uid="uid://du1bukfdw0025" path="res://assets/music/basstrack3v1.wav" id="13_5newe"]
-[ext_resource type="Texture2D" uid="uid://bjgy7ud7mqu6j" path="res://assets/images/instruments/baterista.png" id="14_e1j6l"]
+[ext_resource type="AudioStream" uid="uid://cpub7mljx2en6" path="res://assets/music/basstrack3v1.wav" id="13_5newe"]
+[ext_resource type="Texture2D" uid="uid://k8tp4j80whej" path="res://assets/images/instruments/baterista.png" id="14_e1j6l"]
 [ext_resource type="Texture2D" uid="uid://b7y2d35h8gs7w" path="res://assets/images/shop/lojinha.png" id="15_ca42v"]
-[ext_resource type="AudioStream" uid="uid://5e8f4u4bp68o" path="res://assets/music/drumtrack3v1.wav" id="15_pl11u"]
-[ext_resource type="Texture2D" uid="uid://4tyj1do4lsnd" path="res://assets/images/instruments/guitarrista.png" id="16_bhx41"]
-[ext_resource type="AudioStream" uid="uid://cy3mhyk4lon3o" path="res://assets/music/guitartrack3v1.wav" id="17_qnb83"]
+[ext_resource type="AudioStream" uid="uid://djuu0ey2sc4y5" path="res://assets/music/drumtrack3v1.wav" id="15_pl11u"]
+[ext_resource type="Texture2D" uid="uid://bygys5rwavit4" path="res://assets/images/instruments/guitarrista.png" id="16_bhx41"]
+[ext_resource type="AudioStream" uid="uid://htmwb3dhxxka" path="res://assets/music/guitartrack3v1.wav" id="17_qnb83"]
 [ext_resource type="AudioStream" uid="uid://b0i5felplksbl" path="res://assets/sfx/bar ambience.mp3" id="29_suyxu"]
-=======
-[ext_resource type="Texture2D" uid="uid://b3nnfv5ass75m" path="res://assets/images/shop/carddrum1.png" id="8_bhx41"]
-[ext_resource type="Script" uid="uid://1ksgt7dvbkqj" path="res://scripts/piano.gd" id="9_264po"]
-[ext_resource type="Texture2D" uid="uid://bhdn8uncpx4c6" path="res://assets/images/shop/cardguitar1.png" id="9_qnb83"]
-[ext_resource type="Script" uid="uid://qrmr7lnpkh5r" path="res://scripts/drumbuy.gd" id="9_sww3w"]
-[ext_resource type="AudioStream" uid="uid://bd26yi8s4m01g" path="res://assets/music/pianotrack3v1.wav" id="10_1kice"]
-[ext_resource type="Script" uid="uid://iq15t6qapwn" path="res://scripts/guitarbuy.gd" id="11_suyxu"]
-[ext_resource type="Script" uid="uid://d231py2jatinp" path="res://scripts/bass.gd" id="12_1kice"]
-[ext_resource type="Script" uid="uid://c0vj0su2vs7ls" path="res://scripts/naoposicionar.gd" id="12_ssvqc"]
-[ext_resource type="AudioStream" uid="uid://dloxo6w7slfx7" path="res://assets/music/basstrack3v1.wav" id="13_5newe"]
-[ext_resource type="Texture2D" uid="uid://d4dwcqw8qd525" path="res://assets/images/instruments/baterista.png" id="14_e1j6l"]
-[ext_resource type="Texture2D" uid="uid://b7y2d35h8gs7w" path="res://assets/images/shop/lojinha.png" id="15_ca42v"]
-[ext_resource type="AudioStream" uid="uid://dsuavpqc56y8m" path="res://assets/music/drumtrack3v1.wav" id="15_pl11u"]
-[ext_resource type="Texture2D" uid="uid://e5tj0kem1inv" path="res://assets/images/instruments/guitarrista.png" id="16_bhx41"]
-[ext_resource type="AudioStream" uid="uid://kx51mkbswcak" path="res://assets/music/guitartrack3v1.wav" id="17_qnb83"]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
 size = Vector2(9.29703, 7.10256)
@@ -346,14 +325,9 @@ autoplay = true
 [connection signal="pressed" from="loja/pianobuy" to="." method="_on_pianobuy_pressed"]
 [connection signal="pressed" from="loja/pianobuy" to="loja/pianobuy" method="_on_pressed"]
 [connection signal="pressed" from="loja/bassbuy" to="." method="_on_bassbuy_pressed"]
-<<<<<<< Updated upstream
 [connection signal="pressed" from="loja/bassbuy" to="loja/bassbuy" method="_on_pressed"]
 [connection signal="pressed" from="loja/drumbuy" to="." method="_on_drumbuy_pressed"]
 [connection signal="pressed" from="loja/drumbuy" to="loja/drumbuy" method="_on_pressed"]
 [connection signal="pressed" from="loja/guitarbuy" to="." method="_on_guitarbuy_pressed"]
 [connection signal="pressed" from="loja/guitarbuy" to="loja/guitarbuy" method="_on_pressed"]
-=======
-[connection signal="pressed" from="loja/drumbuy" to="." method="_on_drumbuy_pressed"]
-[connection signal="pressed" from="loja/guitarbuy" to="." method="_on_guitarbuy_pressed"]
->>>>>>> Stashed changes
 [connection signal="mouse_entered" from="instrumentos/AreaPosicionamento" to="." method="_on_area_2d_mouse_entered"]

@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< Updated upstream
-uid="uid://djl7t5vvlkb8s"
-=======
-uid="uid://bd26yi8s4m01g"
->>>>>>> Stashed changes
+uid="uid://cowu6j5odpgwx"
 path="res://.godot/imported/pianotrack3v1.wav-f131c8ca2d215c8344698832e445e336.sample"
 
 [deps]

@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< Updated upstream
-uid="uid://du1bukfdw0025"
-=======
-uid="uid://dloxo6w7slfx7"
->>>>>>> Stashed changes
+uid="uid://cpub7mljx2en6"
 path="res://.godot/imported/basstrack3v1.wav-027096ed5208d27fd56c2d6a8efa9158.sample"
 
 [deps]
