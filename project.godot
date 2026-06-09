@@ -13,7 +13,7 @@ config_version=5
 config/name="Musiclicker"
 run/main_scene="uid://d0ol8022xyf0p"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c3s6yn33i7ecj"
 
 [display]
 

@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://f6ndlf0pn38r"
+<<<<<<< Updated upstream
+uid="uid://cy3mhyk4lon3o"
+=======
+uid="uid://kx51mkbswcak"
+>>>>>>> Stashed changes
 path="res://.godot/imported/guitartrack3v1.wav-47c1325090f6360293d02f23bb977de0.sample"
 
 [deps]
@@ -18,7 +22,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

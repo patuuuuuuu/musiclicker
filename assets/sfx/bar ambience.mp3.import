@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0i5felplksbl"
+path="res://.godot/imported/bar ambience.mp3-a79bb1ee7b5742cb62451d588d179367.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/bar ambience.mp3"
+dest_files=["res://.godot/imported/bar ambience.mp3-a79bb1ee7b5742cb62451d588d179367.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
